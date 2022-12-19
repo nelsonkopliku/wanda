@@ -25,6 +25,7 @@ Here's a collection of build-in gatherers, with information about how to use the
 | [`hosts`](#hosts-etchosts)       | [trento-project/agent/../gatherers/hostsfile.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/hostsfile.go)                |
 | [`package_version`](#package_version) | [trento-project/agent/../gatherers/packageversion.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/packageversion.go) |
 | [`sbd_config`](#sbd_config)      | [trento-project/agent/../gatherers/sbd.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/sbd.go)                            |
+| [`sbd_dump`](#sbd_dump)      | [trento-project/agent/../gatherers/sbddump.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/sbddump.go)                            |
 | [`systemd`](#systemd)            | [trento-project/agent/../gatherers/systemd.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/systemd.go)                    |
 
 ### corosync.conf
@@ -196,6 +197,54 @@ facts:
 ```
 
 For extra information refer to [trento-project/agent/../gatherers/sbd_test.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/sbd_test.go)
+
+### sbd_dump
+
+This gatherer allows accessing the dumped information about all the configured devices on target node.
+Simply executes `sbd -d <device> dump` for all the devices in `/etc/sysconfig/sbd` and aggregates results in only one fact.
+
+Note that:
+- no arguments are required and any provided argument would just be ignored.
+- if dumping any of the devices fails, the fact would be a fact error
+
+```rust
+{
+  "/path/to/a-device" => {
+    "header_version"   => 2.1,
+    "number_of_slots"  => 255,
+    "sector_size"      => 512,
+    "timeout_allocate" => 2,
+    "timeout_loop"     => 1,
+    "timeout_msgwait"  => 10,
+    "timeout_watchdog" => 5,
+    "uuid"             => "e09c8993-0cba-438d-a4c3-78e91f58ee52",
+  },
+  "/path/to/another-device" => {
+    "header_version"   => 2.1,
+    "number_of_slots"  => 255,
+    "sector_size"      => 512,
+    "timeout_allocate" => 2,
+    "timeout_loop"     => 1,
+    "timeout_msgwait"  => 10,
+    "timeout_watchdog" => 5,
+    "uuid"             => "e5b7c05a-1d3c-43d0-827a-9d4dd05ca54a",
+  }
+}
+```
+
+
+Specification examples:
+
+```yaml
+facts:
+  - name: sbd_devices_dump
+    gatherer: sbd_dump
+
+  - name: sbd_devices_dump
+    gatherer: whatever_argument # ignored
+```
+
+For extra information refer to [trento-project/agent/../gatherers/sbddump_test.go](https://github.com/trento-project/agent/blob/main/internal/factsengine/gatherers/sbddump_test.go)
 
 ### systemd
 
