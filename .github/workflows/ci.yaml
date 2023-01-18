@@ -337,7 +337,7 @@ jobs:
           semver_only: true
           initial_version: 0.0.1
       - name: Get mix deps
-        run: mix local.hex --force && mix deps.clean --all && mix deps.get
+        run: mix local.hex --force && mix deps.clean --all && mix deps.get && mix compile
       - name: Configure OSC
         # OSC credentials must be configured beforehand as the HOME variables cannot be changed from /github/home
         # that is used to run osc commands
