@@ -6,24 +6,19 @@
 
 FROM bci/bci-base:15.3 AS elixir-build
 ADD wanda.tar.gz /build/
+
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
-RUN zypper -n addrepo https://download.opensuse.org/repositories/devel:/languages:/erlang/SLE_15_SP3/devel:languages:erlang.repo
-RUN zypper -n --gpg-auto-import-keys ref -s
-RUN zypper -n in elixir rust cargo
-COPY . /build
-WORKDIR /build
-ARG MIX_ENV=prod
-ENV MIX_ENV=$MIX_ENV
-RUN mix local.rebar --force \
-    && mix local.hex --force \
-    && mix deps.get
+
+WORKDIR /build/wanda/
+
+ENV MIX_ENV=prod
 
 FROM bci/bci-base:15.3 AS release
 # Workaround for https://github.com/openSUSE/obs-build/issues/487
 RUN zypper --non-interactive in sles-release
-RUN zypper -n in elixir elixir-hex erlang-rebar3
+RUN zypper -n in elixir elixir-hex erlang-rebar3 rust cargo
 COPY --from=elixir-build /build /build
 WORKDIR /build/wanda/
 ENV LANG en_US.UTF-8
@@ -32,6 +27,7 @@ ENV LC_ALL en_US.UTF-8
 ENV MIX_ENV=prod
 ENV MIX_HOME=/usr/bin
 ENV VERSION=%%VERSION%%
+# RUN mix compile
 RUN mix phx.digest
 RUN mix release
 

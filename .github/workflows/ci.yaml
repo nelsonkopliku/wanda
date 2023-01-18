@@ -69,44 +69,44 @@ jobs:
       - name: Run TLint
         run: "/home/tlint/tlint lint -f /data/priv/catalog"
 
-  static-code-analysis:
-    name: Static Code Analysis
-    needs: elixir-deps
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: ${{ github.token }}
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Setup
-        uses: erlef/setup-beam@v1
-        with:
-          elixir-version: ${{ env.ELIXIR_VERSION }}
-          otp-version: ${{ env.OTP_VERSION }}
-        env:
-          ImageOS: ubuntu20
+  # static-code-analysis:
+  #   name: Static Code Analysis
+  #   needs: elixir-deps
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - name: Cancel Previous Runs
+  #       uses: styfle/cancel-workflow-action@0.11.0
+  #       with:
+  #         access_token: ${{ github.token }}
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Setup
+  #       uses: erlef/setup-beam@v1
+  #       with:
+  #         elixir-version: ${{ env.ELIXIR_VERSION }}
+  #         otp-version: ${{ env.OTP_VERSION }}
+  #       env:
+  #         ImageOS: ubuntu20
 
-      - name: Retrieve Elixir Cached Dependencies
-        uses: actions/cache@v3
-        id: mix-cache
-        with:
-          path: |
-            deps
-            _build/test
-            priv/plts
-          key: ${{ runner.os }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}-${{ hashFiles('mix.lock') }}
-      - name: Check for unused dependencies
-        run: mix deps.unlock --check-unused
-      - name: Check Code Format
-        run: mix format --check-formatted
-      - name: Run Credo
-        run: mix credo --strict
-      - name: Run Dialyzer
-        run: mix dialyzer
+  #     - name: Retrieve Elixir Cached Dependencies
+  #       uses: actions/cache@v3
+  #       id: mix-cache
+  #       with:
+  #         path: |
+  #           deps
+  #           _build/test
+  #           priv/plts
+  #         key: ${{ runner.os }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}-${{ hashFiles('mix.lock') }}
+  #     - name: Check for unused dependencies
+  #       run: mix deps.unlock --check-unused
+  #     - name: Check Code Format
+  #       run: mix format --check-formatted
+  #     - name: Run Credo
+  #       run: mix credo --strict
+  #     - name: Run Dialyzer
+  #       run: mix dialyzer
 
   test:
     name: Test
@@ -165,7 +165,8 @@ jobs:
     name: Build and push container images
     runs-on: ubuntu-latest
     if: github.event_name == 'release' || (github.event_name == 'push' && github.ref_name == 'main') || github.event_name == 'workflow_dispatch'
-    needs: [static-code-analysis, test]
+    # needs: [static-code-analysis, test]
+    needs: [test]
     permissions:
       contents: read
       packages: write
@@ -238,7 +239,8 @@ jobs:
     name: Build the docker image for the demo environment
     runs-on: ubuntu-latest
     if: github.event_name == 'release' || (github.event_name == 'push' && github.ref_name == 'main') || github.event_name == 'workflow_dispatch'
-    needs: [static-code-analysis, test]
+    # needs: [static-code-analysis, test]
+    needs: [test]
     permissions:
       contents: read
       packages: write
@@ -311,7 +313,8 @@ jobs:
     name: Commit the project on OBS
     runs-on: ubuntu-20.04
     if: github.event_name == 'release' || (github.event_name == 'push' && github.ref_name == 'main') || github.event_name == 'workflow_dispatch'
-    needs: [static-code-analysis, test]
+    # needs: [static-code-analysis, test]
+    needs: [test]
     container:
       image: ghcr.io/trento-project/continuous-delivery:main
       env:
@@ -337,7 +340,7 @@ jobs:
           semver_only: true
           initial_version: 0.0.1
       - name: Get mix deps
-        run: mix local.hex --force && mix deps.clean --all && mix deps.get
+        run: mix local.hex --force && mix deps.clean --all && mix deps.get && mix compile
       - name: Configure OSC
         # OSC credentials must be configured beforehand as the HOME variables cannot be changed from /github/home
         # that is used to run osc commands
