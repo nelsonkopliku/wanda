@@ -111,7 +111,7 @@ jobs:
   test:
     name: Test
     needs: elixir-deps
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     services:
       postgres:
         image: postgres
