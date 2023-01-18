@@ -339,6 +339,9 @@ jobs:
         with:
           semver_only: true
           initial_version: 0.0.1
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
       - name: Get mix deps
         run: mix local.hex --force && mix local.rebar --force && mix deps.clean --all && mix deps.get && mix compile
       - name: Configure OSC
