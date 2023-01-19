@@ -18,7 +18,7 @@ ENV MIX_ENV=prod
 FROM bci/rust:1.66 AS release
 # Workaround for https://github.com/openSUSE/obs-build/issues/487
 RUN zypper --non-interactive in sles-release
-RUN zypper -n in elixir elixir-hex erlang-rebar3 rust cargo
+RUN zypper -n in elixir elixir-hex erlang-rebar3
 COPY --from=elixir-build /build /build
 WORKDIR /build/wanda/
 ENV LANG en_US.UTF-8
