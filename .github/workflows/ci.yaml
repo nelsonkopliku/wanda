@@ -235,80 +235,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./doc
 
-  build-demo-img:
-    name: Build the docker image for the demo environment
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release' || (github.event_name == 'push' && github.ref_name == 'main') || github.event_name == 'workflow_dispatch'
-    # needs: [static-code-analysis, test]
-    needs: [test]
-    permissions:
-      contents: read
-      packages: write
-    env:
-      MIX_ENV: demo
-      REGISTRY: ghcr.io
-      IMAGE_REPOSITORY: ghcr.io/${{ github.repository_owner }}/wanda
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: docker/setup-buildx-action@v2
-      - name: Log in to the Container registry
-        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@507c2f2dc502c992ad446e3d7a5dfbe311567a96
-        with:
-          images: ${{ env.IMAGE_REPOSITORY }}
-      - name: Build and push container image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: ${{ env.IMAGE_REPOSITORY }}:demo
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: MIX_ENV=demo
-
-  deploy-demo-env:
-    name: Deploy updated images to the demo environment
-    runs-on: self-hosted
-    if: github.event_name == 'release' || (github.event_name == 'push' && github.ref_name == 'main') || github.event_name == 'workflow_dispatch'
-    env:
-      IMAGE_REPOSITORY: ghcr.io/${{ github.repository_owner }}/wanda
-    needs: build-demo-img
-    steps:
-      - name: Start a local k8s cluster
-        uses: jupyterhub/action-k3s-helm@v3
-        with:
-          k3s-channel: latest
-      - name: Add bitnami helm deps
-        run: |
-          helm repo add bitnami https://charts.bitnami.com/bitnami
-          helm repo update
-      - name: Download and unzip helm chart
-        run: |
-          rm rolling.zip | true
-          rm -rf helm-charts-rolling | true
-          wget https://github.com/trento-project/helm-charts/archive/refs/tags/rolling.zip
-          unzip rolling.zip
-      - name: Install trento-server helm chart
-        run: echo "here we'll deploy wanda on demo"
-        # run: |
-        #   cd helm-charts-rolling/charts/trento-server
-        #   helm dependency update          
-        #   helm upgrade -i trento --wait . \
-        #     --set-file trento-runner.privateKey=/home/azureuser/.ssh/id_rsa \
-        #     --set trento-web.adminUser.password="${{ secrets.DEMO_PASSWORD }}" \
-        #     --set trento-web.image.pullPolicy=Always \
-        #     --set trento-web.image.repository="${IMAGE_REPOSITORY}" \
-        #     --set trento-web.image.tag="demo"
-
   obs-commit:
     name: Commit the project on OBS
     runs-on: ubuntu-20.04
@@ -348,6 +274,7 @@ jobs:
       - name: cargo vendor
         run: |
           cd deps/rhai_rustler/native/rhai_rustler
+          cargo version
           cargo vendor
           printf '\n\n[source.crates-io]\nreplace-with = "vendored-sources"\n\n[source.vendored-sources]\ndirectory = "vendor"\n'>> .cargo/config
       - name: Configure OSC
