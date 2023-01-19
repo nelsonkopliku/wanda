@@ -339,11 +339,17 @@ jobs:
         with:
           semver_only: true
           initial_version: 0.0.1
-      - uses: actions-rs/toolchain@v1
+      - name: Setup rust
+        uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
       - name: Get mix deps
-        run: mix local.hex --force && mix local.rebar --force && mix deps.clean --all && mix deps.get && mix deps.compile
+        run: mix local.hex --force && mix local.rebar --force && mix deps.clean --all && mix deps.get
+      - name: cargo vendor
+        run: |
+          cd deps/rhai_rustler/native/rhai_rustler
+          cargo vendor
+          printf '\n[source.crates-io]\nreplace-with = "vendored-sources"\n\n[source.vendored-sources]\ndirectory = "vendor"\n'>> .cargo/config
       - name: Configure OSC
         # OSC credentials must be configured beforehand as the HOME variables cannot be changed from /github/home
         # that is used to run osc commands
