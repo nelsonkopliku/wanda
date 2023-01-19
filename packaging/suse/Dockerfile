@@ -27,6 +27,7 @@ ENV LC_ALL en_US.UTF-8
 ENV MIX_ENV=prod
 ENV MIX_HOME=/usr/bin
 ENV VERSION=%%VERSION%%
+RUN cargo version
 # RUN mix compile
 RUN mix phx.digest
 RUN mix release
