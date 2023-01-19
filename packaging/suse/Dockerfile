@@ -4,7 +4,7 @@
 #!BuildTag: trento/trento-wanda:%%VERSION%%-build%RELEASE%
 #!UseOBSRepositories
 
-FROM bci/bci-base:15.3 AS elixir-build
+FROM bci/rust:1.66 AS elixir-build
 ADD wanda.tar.gz /build/
 
 ENV LANG en_US.UTF-8
@@ -15,7 +15,7 @@ WORKDIR /build/wanda/
 
 ENV MIX_ENV=prod
 
-FROM bci/bci-base:15.3 AS release
+FROM bci/rust:1.66 AS release
 # Workaround for https://github.com/openSUSE/obs-build/issues/487
 RUN zypper --non-interactive in sles-release
 RUN zypper -n in elixir elixir-hex erlang-rebar3 rust cargo
@@ -32,7 +32,7 @@ RUN cargo version
 RUN mix phx.digest
 RUN mix release
 
-FROM bci/bci-base:15.3 AS wanda
+FROM bci/rust:1.66 AS wanda
 # Define labels according to https://en.opensuse.org/Building_derived_containers
 # labelprefix=com.suse.trento
 LABEL org.opencontainers.image.source="https://github.com/trento-project/wanda"
