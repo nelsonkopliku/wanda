@@ -274,9 +274,8 @@ jobs:
       - name: cargo vendor
         run: |
           cd deps/rhai_rustler/native/rhai_rustler
-          cargo version
           cargo vendor
-          printf '\n\n[source.crates-io]\nreplace-with = "vendored-sources"\n\n[source.vendored-sources]\ndirectory = "vendor"\n'>> .cargo/config
+          printf '\n\n[source.crates-io]\nreplace-with = "vendored-sources"\n\n[source.vendored-sources]\ndirectory = "vendor"\n' >> .cargo/config
       - name: Configure OSC
         # OSC credentials must be configured beforehand as the HOME variables cannot be changed from /github/home
         # that is used to run osc commands

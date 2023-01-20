@@ -4,22 +4,11 @@
 #!BuildTag: trento/trento-wanda:%%VERSION%%-build%RELEASE%
 #!UseOBSRepositories
 
-FROM bci/rust:1.66 AS elixir-build
-ADD wanda.tar.gz /build/
-
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
-
-WORKDIR /build/wanda/
-
-ENV MIX_ENV=prod
-
 FROM bci/rust:1.66 AS release
+ADD wanda.tar.gz /build/
 # Workaround for https://github.com/openSUSE/obs-build/issues/487
 RUN zypper --non-interactive in sles-release
 RUN zypper -n in elixir elixir-hex erlang-rebar3
-COPY --from=elixir-build /build /build
 WORKDIR /build/wanda/
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
@@ -27,8 +16,6 @@ ENV LC_ALL en_US.UTF-8
 ENV MIX_ENV=prod
 ENV MIX_HOME=/usr/bin
 ENV VERSION=%%VERSION%%
-RUN cargo version
-# RUN mix compile
 RUN mix phx.digest
 RUN mix release
 
