@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
-    <meta name="project" content="Wanda v0.1.0">
+    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="project" content="Wanda v1.0.0">
 
-    <title>WandaWeb.Router.Helpers — Wanda v0.1.0</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <title>WandaWeb.Router.Helpers — Wanda v1.0.0</title>
+    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-627A1975.js"></script>
+    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
+    <script src="dist/sidebar_items-2DFD3920.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-XN2TSG4M.js"></script>
+    <script async src="dist/html-JDI3AVDD.js"></script>
 
 
   </head>
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -70,9 +71,9 @@
       <a href="readme.html" class="sidebar-projectName" translate="no">
 Wanda
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
-        v0.1.0
-      </strong>
+      <div class="sidebar-projectVersion" translate="no">
+        v1.0.0
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">GUIDES</a></li>
@@ -84,7 +85,7 @@ Wanda
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -93,19 +94,19 @@ Wanda
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">WandaWeb.Router.Helpers</span> 
-  <small class="app-vsn" translate="no">(Wanda v0.1.0)</small>
+  <small class="app-vsn" translate="no">(Wanda v1.0.0)</small>
 
 </h1>
 
@@ -123,207 +124,270 @@ Wanda
       </a>
       Summary
     </h1>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
 
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#catalog_path/2" translate="no">catalog_path(conn_or_endpoint, action)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#api_redirector_path/3" translate="no">api_redirector_path(conn_or_endpoint, action, path)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#catalog_path/3" translate="no">catalog_path(conn_or_endpoint, action, params)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#catalog_url/2" translate="no">catalog_url(conn_or_endpoint, action)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#api_redirector_path/4" translate="no">api_redirector_path(conn_or_endpoint, action, path, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#catalog_url/3" translate="no">catalog_url(conn_or_endpoint, action, params)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#execution_path/2" translate="no">execution_path(conn_or_endpoint, action)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#api_redirector_url/3" translate="no">api_redirector_url(conn_or_endpoint, action, path)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#execution_path/3" translate="no">execution_path(conn_or_endpoint, action, params)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#execution_path/4" translate="no">execution_path(conn_or_endpoint, action, id, params)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#api_redirector_url/4" translate="no">api_redirector_url(conn_or_endpoint, action, path, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#execution_url/2" translate="no">execution_url(conn_or_endpoint, action)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#execution_url/3" translate="no">execution_url(conn_or_endpoint, action, params)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#catalog_path/2" translate="no">catalog_path(conn_or_endpoint, action)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#execution_url/4" translate="no">execution_url(conn_or_endpoint, action, id, params)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#path/2" translate="no">path(data, path)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Generates the path information including any necessary prefix.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#catalog_path/3" translate="no">catalog_path(conn_or_endpoint, action, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#render_spec_path/2" translate="no">render_spec_path(conn_or_endpoint, action)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#render_spec_path/3" translate="no">render_spec_path(conn_or_endpoint, action, params)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#catalog_url/2" translate="no">catalog_url(conn_or_endpoint, action)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#render_spec_url/2" translate="no">render_spec_url(conn_or_endpoint, action)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#render_spec_url/3" translate="no">render_spec_url(conn_or_endpoint, action, params)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#catalog_url/3" translate="no">catalog_url(conn_or_endpoint, action, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#static_integrity/2" translate="no">static_integrity(endpoint, path)</a>
+    </div>
 
-        </div>
-
-          <div class="summary-synopsis"><p>Generates an integrity hash to a static asset given its file path.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#execution_path/2" translate="no">execution_path(conn_or_endpoint, action)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#static_path/2" translate="no">static_path(conn, path)</a>
+    </div>
 
-        </div>
-
-          <div class="summary-synopsis"><p>Generates path to a static asset given its file path.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#execution_path/3" translate="no">execution_path(conn_or_endpoint, action, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#static_url/2" translate="no">static_url(conn, path)</a>
+    </div>
 
-        </div>
-
-          <div class="summary-synopsis"><p>Generates url to a static asset given its file path.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#execution_path/4" translate="no">execution_path(conn_or_endpoint, action, id, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#swagger_ui_path/2" translate="no">swagger_ui_path(conn_or_endpoint, action)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#swagger_ui_path/3" translate="no">swagger_ui_path(conn_or_endpoint, action, params)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#execution_url/2" translate="no">execution_url(conn_or_endpoint, action)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#swagger_ui_url/2" translate="no">swagger_ui_url(conn_or_endpoint, action)</a>
+    </div>
 
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#swagger_ui_url/3" translate="no">swagger_ui_url(conn_or_endpoint, action, params)</a>
-
-        </div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#execution_url/3" translate="no">execution_url(conn_or_endpoint, action, params)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#url/1" translate="no">url(data)</a>
+    </div>
 
-        </div>
-
-          <div class="summary-synopsis"><p>Generates the connection/endpoint base URL without any path information.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#execution_url/4" translate="no">execution_url(conn_or_endpoint, action, id, params)</a>
 
       </div>
 
-  </div>
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#health_path/2" translate="no">health_path(conn_or_endpoint, action)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#health_path/3" translate="no">health_path(conn_or_endpoint, action, params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#health_url/2" translate="no">health_url(conn_or_endpoint, action)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#health_url/3" translate="no">health_url(conn_or_endpoint, action, params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#path/2" translate="no">path(data, path)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Generates the path information including any necessary prefix.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#render_spec_path/2" translate="no">render_spec_path(conn_or_endpoint, action)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#render_spec_path/3" translate="no">render_spec_path(conn_or_endpoint, action, params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#render_spec_url/2" translate="no">render_spec_url(conn_or_endpoint, action)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#render_spec_url/3" translate="no">render_spec_url(conn_or_endpoint, action, params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#static_integrity/2" translate="no">static_integrity(endpoint, path)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Generates an integrity hash to a static asset given its file path.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#static_path/2" translate="no">static_path(conn, path)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Generates path to a static asset given its file path.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#static_url/2" translate="no">static_url(conn, path)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Generates url to a static asset given its file path.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#swagger_ui_path/2" translate="no">swagger_ui_path(conn_or_endpoint, action)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#swagger_ui_path/3" translate="no">swagger_ui_path(conn_or_endpoint, action, params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#swagger_ui_url/2" translate="no">swagger_ui_url(conn_or_endpoint, action)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#swagger_ui_url/3" translate="no">swagger_ui_url(conn_or_endpoint, action, params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#url/1" translate="no">url(data)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Generates the connection/endpoint base URL without any path information.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -337,6 +401,94 @@ Wanda
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="api_redirector_path/3">
+
+  <div class="detail-header">
+    <a href="#api_redirector_path/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">api_redirector_path(conn_or_endpoint, action, path)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="api_redirector_path/4">
+
+  <div class="detail-header">
+    <a href="#api_redirector_path/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">api_redirector_path(conn_or_endpoint, action, path, params)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="api_redirector_url/3">
+
+  <div class="detail-header">
+    <a href="#api_redirector_url/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">api_redirector_url(conn_or_endpoint, action, path)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="api_redirector_url/4">
+
+  <div class="detail-header">
+    <a href="#api_redirector_url/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">api_redirector_url(conn_or_endpoint, action, path, params)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="catalog_path/2">
 
   <div class="detail-header">
@@ -346,7 +498,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">catalog_path(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -368,7 +520,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">catalog_path(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -390,7 +542,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">catalog_url(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -412,7 +564,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">catalog_url(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -434,7 +586,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">execution_path(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -456,7 +608,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">execution_path(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -478,7 +630,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">execution_path(conn_or_endpoint, action, id, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -500,7 +652,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">execution_url(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -522,7 +674,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">execution_url(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -544,7 +696,95 @@ Functions
     </a>
     <h1 class="signature" translate="no">execution_url(conn_or_endpoint, action, id, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="health_path/2">
+
+  <div class="detail-header">
+    <a href="#health_path/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">health_path(conn_or_endpoint, action)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="health_path/3">
+
+  <div class="detail-header">
+    <a href="#health_path/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">health_path(conn_or_endpoint, action, params)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="health_url/2">
+
+  <div class="detail-header">
+    <a href="#health_url/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">health_url(conn_or_endpoint, action)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="health_url/3">
+
+  <div class="detail-header">
+    <a href="#health_url/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">health_url(conn_or_endpoint, action, params)</h1>
+
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -566,7 +806,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">path(data, path)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -588,7 +828,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">render_spec_path(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -610,7 +850,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">render_spec_path(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -632,7 +872,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">render_spec_url(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -654,7 +894,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">render_spec_url(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -676,7 +916,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">static_integrity(endpoint, path)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -698,7 +938,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">static_path(conn, path)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -720,7 +960,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">static_url(conn, path)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -742,7 +982,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">swagger_ui_path(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -764,7 +1004,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">swagger_ui_path(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -786,7 +1026,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">swagger_ui_url(conn_or_endpoint, action)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -808,7 +1048,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">swagger_ui_url(conn_or_endpoint, action, params)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -830,7 +1070,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">url(data)</h1>
 
-      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/trento-project/wanda/blob/main/lib/wanda_web/router.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -848,10 +1088,23 @@ Functions
   </section>
 
       <footer class="footer">
-
         <p>
+
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
+            </button>
+
+              <a href="Wanda.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
