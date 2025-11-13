@@ -4,116 +4,92 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.4">
-    <meta name="project" content="Wanda v1.0.0">
-
-    <title>API Reference — Wanda v1.0.0</title>
-    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+    <meta name="generator" content="ExDoc v0.38.1">
+    <meta name="project" content="Wanda v1.5.0">
 
 
-    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
-    <script src="dist/sidebar_items-2DFD3920.js"></script>
+    <title>API Reference — Wanda v1.5.0</title>
 
-      <script src="docs_config.js"></script>
+    <link rel="stylesheet" href="dist/html-elixir-J3PIVQVA.css" />
 
-    <script async src="dist/html-JDI3AVDD.js"></script>
-
+    <script defer src="dist/sidebar_items-A7726B95.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-DPJLHKSM.js"></script>
 
   </head>
-  <body data-type="extras" class="page-extra">
-    <script>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
 
-      try {
-        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+<div class="body-wrapper">
 
-        if (settings.theme === 'dark' ||
-           ((settings.theme === 'system' || settings.theme == null) &&
-             window.matchMedia('(prefers-color-scheme: dark)').matches)
-           ) {
-          document.body.classList.add('dark')
-        }
-      } catch (error) { }
-    </script>
-
-<div class="main">
-
-<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+<button id="sidebar-menu" class="sidebar-button sidebar-toggle" aria-label="toggle sidebar" aria-controls="sidebar">
   <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
 </button>
 
-<section class="sidebar">
-  <form class="sidebar-search" action="search.html">
-    <button type="submit" class="search-button" aria-label="Submit Search">
-      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
-    </button>
-    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
-      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
-    </button>
-    <label class="search-label">
-      <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-    </label>
-  </form>
-
-  <div class="autocomplete">
-    <div class="autocomplete-results">
-    </div>
-  </div>
+<nav id="sidebar" class="sidebar">
 
   <div class="sidebar-header">
+    <div class="sidebar-projectInfo">
 
-      <a href="readme.html">
-        <img src="assets/logo.svg" alt="Wanda" class="sidebar-projectImage">
-      </a>
+        <a href="api-reference.html" class="sidebar-projectImage">
+          <img src="assets/logo.svg" alt="Wanda" />
+        </a>
 
-    <div class="sidebar-projectDetails">
-      <a href="readme.html" class="sidebar-projectName" translate="no">
+      <div>
+        <a href="api-reference.html" class="sidebar-projectName" translate="no">
 Wanda
-      </a>
-      <div class="sidebar-projectVersion" translate="no">
-        v1.0.0
+        </a>
+        <div class="sidebar-projectVersion" translate="no">
+          v1.5.0
+        </div>
       </div>
     </div>
-    <ul class="sidebar-listNav">
-      <li><a id="extras-list-link" href="#full-list">GUIDES</a></li>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras="Project Info"></ul>
+  </div>
+</nav>
 
-        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+<output role="status" id="toast"></output>
 
+<main class="content page-extra" id="main" data-type="extras">
+  <div id="content" class="content-inner">
+    <div class="top-search">
+      <div class="search-settings">
+        <form class="search-bar" action="search.html">
+          <label class="search-label">
+            <span class="sr-only">Search documentation of Wanda</span>
+            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+          </label>
+          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
+          </button>
+          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+            <i class="ri-close-line ri-lg" title="Cancel search"></i>
+          </button>
+        </form>
+        <div class="autocomplete">
+        </div>
+        <button class="icon-settings display-settings">
+          <i class="ri-settings-3-line"></i>
+          <span class="sr-only">Settings</span>
+        </button>
+      </div>
+    </div>
 
-    </ul>
+<div id="top-content">
+  <div class="heading-with-actions top-heading">
+    <h1>API Reference <small class="app-vsn">Wanda v#1.5.0</small></h1>
+
+      <a href="https://github.com/trento-project/wanda" title="View Source" class="icon-action" rel="help">
+        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        <span class="sr-only">View Source</span>
+      </a>
+
   </div>
 
-  <div class="gradient"></div>
-  <ul id="full-list"></ul>
-</section>
-
-<section class="content">
-  <output role="status" id="toast"></output>
-  <div class="content-outer">
-    <div id="content" class="content-inner">
-
-<h1>
-<button class="icon-action display-settings">
-  <i class="ri-settings-3-line"></i>
-  <span class="sr-only">Settings</span>
-</button>
-
-
-
-  <span>API Reference <small class="app-vsn">Wanda v1.0.0</small></span>
-</h1>
-
-
-  <section class="details-list">
-    <h2 id="modules" class="section-heading">
-  <a href="#modules" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">modules</p>
-  </a>
-  Modules
-</h2>
-
-    <div class="summary">
+    <section class="details-list">
+      <h2 id="modules" class="section-heading">Modules</h2>
+      <div class="summary">
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Wanda.Catalog.html" translate="no">Wanda.Catalog</a>
@@ -134,11 +110,65 @@ Wanda
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Wanda.Catalog.CheckCustomization.html" translate="no">Wanda.Catalog.CheckCustomization</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Schema representing Customizations applied for a Check in a specific execution group.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Wanda.Catalog.Condition.html" translate="no">Wanda.Catalog.Condition</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Represents a condition.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.CustomizationPolicy.html" translate="no">Wanda.Catalog.CustomizationPolicy</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Policy for checks customizations.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.CustomizedValue.html" translate="no">Wanda.Catalog.CustomizedValue</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Represents a check's customized value.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.Enums.ExpectType.html" translate="no">Wanda.Catalog.Enums.ExpectType</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents a check expectation type.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.Enums.Severity.html" translate="no">Wanda.Catalog.Enums.Severity</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents a check severity.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.Evaluation.html" translate="no">Wanda.Catalog.Evaluation</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module provides functions to evaluate check values based on their conditions.</p></div>
 
 </div>
 <div class="summary-row">
@@ -161,11 +191,57 @@ Wanda
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Wanda.Catalog.Messaging.Publisher.html" translate="no">Wanda.Catalog.Messaging.Publisher</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Catalog messaging publisher module</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.ResolvedValue.html" translate="no">Wanda.Catalog.ResolvedValue</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Represents a resolved check value as defined check specification.
+It is based on the contextual environment.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.SelectableCheck.html" translate="no">Wanda.Catalog.SelectableCheck</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Represents a check that is selectable for a given execution group given the context.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Catalog.SelectedCheck.html" translate="no">Wanda.Catalog.SelectedCheck</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Represents a selected check used during a check execution.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Wanda.Catalog.Value.html" translate="no">Wanda.Catalog.Value</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Represents a value.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.ChecksCustomizations.html" translate="no">Wanda.ChecksCustomizations</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Customization features.</p></div>
 
 </div>
 <div class="summary-row">
@@ -176,6 +252,17 @@ Wanda
 
     <div class="summary-synopsis"><p>This module defines the setup for tests requiring
 access to the application's data layer.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.EvaluationEngine.html" translate="no">Wanda.EvaluationEngine</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module wraps the Rhai engine and provides a simple interface for
+evaluating expressions.
+It also sets some default options for the engine.</p></div>
 
 </div>
 <div class="summary-row">
@@ -212,6 +299,24 @@ access to the application's data layer.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Represents the result of a check.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Executions.Enums.Result.html" translate="no">Wanda.Executions.Enums.Result</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents a check execution result.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Executions.Enums.Status.html" translate="no">Wanda.Executions.Enums.Status</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents a check execution status.</p></div>
 
 </div>
 <div class="summary-row">
@@ -286,11 +391,11 @@ access to the application's data layer.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Wanda.Executions.FakeEvaluation.html" translate="no">Wanda.Executions.FakeEvaluation</a>
+    <a href="Wanda.Executions.FakeGatheredFacts.html" translate="no">Wanda.Executions.FakeGatheredFacts</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Fake evaluation functional core.</p></div>
+    <div class="summary-synopsis"><p>Module responsible to generate the fake gathered facts from targets</p></div>
 
 </div>
 <div class="summary-row">
@@ -310,6 +415,24 @@ returns (fake) random results.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Facts gathering functional core.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Executions.Messaging.Consumer.html" translate="no">Wanda.Executions.Messaging.Consumer</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Executions messagging consumer module</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Executions.Messaging.Publisher.html" translate="no">Wanda.Executions.Messaging.Publisher</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Executions messagging publisher module</p></div>
 
 </div>
 <div class="summary-row">
@@ -424,6 +547,182 @@ This value has been already determined given the conditions in check definition.
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Wanda.Operations.html" translate="no">Wanda.Operations</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operations are combined actions dispatched to different agents in order to apply
+persistent changes on them.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.AgentReport.html" translate="no">Wanda.Operations.AgentReport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Report of an executed operation from an individual agent</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Catalog.Operation.html" translate="no">Wanda.Operations.Catalog.Operation</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>An operation is a set of actions executed step by step in agents to apply
+permanent changes in them.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Catalog.Registry.html" translate="no">Wanda.Operations.Catalog.Registry</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operations registry where are available operations are listed</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Catalog.Step.html" translate="no">Wanda.Operations.Catalog.Step</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A individual operation step running a single operator.
+The predicate is a rhai execution that returns true/false
+defining if the step needs to be executed in a certain agent.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Enums.OperatorPhase.html" translate="no">Wanda.Operations.Enums.OperatorPhase</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents an operator phase.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Enums.Result.html" translate="no">Wanda.Operations.Enums.Result</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents an operation result.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Enums.Status.html" translate="no">Wanda.Operations.Enums.Status</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Type that represents an operation execution status.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Messaging.Consumer.html" translate="no">Wanda.Operations.Messaging.Consumer</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operations messagging consumer module</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Messaging.Publisher.html" translate="no">Wanda.Operations.Messaging.Publisher</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operations messagging publisher module</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Operation.html" translate="no">Wanda.Operations.Operation</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Schema of a persisted operation.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Operation.Target.html" translate="no">Wanda.Operations.Operation.Target</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.OperationTarget.html" translate="no">Wanda.Operations.OperationTarget</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>An operation target defines an agent where the operation is executed
+with arguments attached to this target, usually used to run the
+operation step predicate</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.OperatorError.html" translate="no">Wanda.Operations.OperatorError</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operator execution result with an error retrieved from an agent.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.OperatorResult.html" translate="no">Wanda.Operations.OperatorResult</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operator execution result retrieved from an agent.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.Server.html" translate="no">Wanda.Operations.Server</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Represents the execution of operations in target agents
+Orchestrates operation executions - issuing operations and receiving back the reports.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.ServerBehaviour.html" translate="no">Wanda.Operations.ServerBehaviour</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operation server API behaviour.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.State.html" translate="no">Wanda.Operations.State</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>State of an operation.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Operations.StepReport.html" translate="no">Wanda.Operations.StepReport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Report of all agent execution of an operation step</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Wanda.Policy.html" translate="no">Wanda.Policy</a>
 
   </div>
@@ -450,6 +749,61 @@ installed.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Wanda.Support.AbilitiesHelper.html" translate="no">Wanda.Support.AbilitiesHelper</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Helper functions for bodyguard policies</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Support.CatalogCase.html" translate="no">Wanda.Support.CatalogCase</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Base case for testing the checks catalog only against fixtures in the <code class="inline">test/fixtures/catalog</code> directory.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Support.DateService.html" translate="no">Wanda.Support.DateService</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>DateTime service</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Support.Ecto.Json.html" translate="no">Wanda.Support.Ecto.Json</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Ecto Type that represents JSON data.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Support.Enum.html" translate="no">Wanda.Support.Enum</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Enum  module with added macros to define a type,
+check supported values and validate possible values</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Wanda.Users.User.html" translate="no">Wanda.Users.User</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Represents the user performing actions in the system.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="WandaWeb.html" translate="no">WandaWeb</a>
 
   </div>
@@ -460,22 +814,39 @@ as controllers, views, channels and so on.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Auth.AccessToken.html" translate="no">WandaWeb.Auth.AccessToken</a>
+    <a href="WandaWeb.Auth.AuthPlug.html" translate="no">WandaWeb.Auth.AuthPlug</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>  Jwt Token is the module responsible for creating a proper jwt access token.
-  Uses Joken as jwt base library</p></div>
+    <div class="summary-synopsis"><p>  Plug responsible for reading the Token from the authorization header and
+  validating it.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Auth.JWTAuthPlug.html" translate="no">WandaWeb.Auth.JWTAuthPlug</a>
+    <a href="WandaWeb.Auth.Client.AuthClient.html" translate="no">WandaWeb.Auth.Client.AuthClient</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>  Plug responsible for reading the JWT from the authorization header and
-  validating it.</p></div>
+    <div class="summary-synopsis"><p>Client for interacting with the authentication server.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Auth.Client.HttpClient.html" translate="no">WandaWeb.Auth.Client.HttpClient</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Http AuthClient implementation.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Auth.UserDetector.html" translate="no">WandaWeb.Auth.UserDetector</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module allows extracting a very simple representation of a user from a connection.</p></div>
 
 </div>
 <div class="summary-row">
@@ -506,7 +877,7 @@ tests that require setting up a connection.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.ErrorView.html" translate="no">WandaWeb.ErrorView</a>
+    <a href="WandaWeb.ErrorJSON.html" translate="no">WandaWeb.ErrorJSON</a>
 
   </div>
 
@@ -527,7 +898,7 @@ tests that require setting up a connection.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.HealthView.html" translate="no">WandaWeb.HealthView</a>
+    <a href="WandaWeb.HealthJSON.html" translate="no">WandaWeb.HealthJSON</a>
 
   </div>
 
@@ -539,7 +910,20 @@ tests that require setting up a connection.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>  This Plug is responsible for redirecting api requests without a specific version
-  to the latest version, when the requested path exists</p></div>
+  to the latest available version, when the requested path exists</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Plugs.SwaggerUIRuntime.html" translate="no">WandaWeb.Plugs.SwaggerUIRuntime</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>  This Plug updates the original SwaggerUI configuration, by adding the
+  configuration of oas_server_url (OAS_SERVER_URL in runtime) url subpath
+  to the individual urls as prefix.
+  This is needed if the OAS_SERVER_URL is given, most probably because
+  wanda requests are coming from a proxy.</p></div>
 
 </div>
 <div class="summary-row">
@@ -551,16 +935,34 @@ tests that require setting up a connection.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Router.Helpers.html" translate="no">WandaWeb.Router.Helpers</a>
+    <a href="WandaWeb.Schemas.All.ApiSpec.html" translate="no">WandaWeb.Schemas.All.ApiSpec</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Module with named helpers generated from WandaWeb.Router.</p></div>
+    <div class="summary-synopsis"><p>OpenApi all specification</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.AcceptedExecutionResponse.html" translate="no">WandaWeb.Schemas.AcceptedExecutionResponse</a>
+    <a href="WandaWeb.Schemas.ApiSpec.html" translate="no">WandaWeb.Schemas.ApiSpec</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenApi specification entry point</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.Unversioned.ApiSpec.html" translate="no">WandaWeb.Schemas.Unversioned.ApiSpec</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenApi specification entry point for unversioned endpoints</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.AcceptedExecutionResponse.html" translate="no">WandaWeb.Schemas.V1.AcceptedExecutionResponse</a>
 
   </div>
 
@@ -570,16 +972,25 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.BadRequest.html" translate="no">WandaWeb.Schemas.BadRequest</a>
+    <a href="WandaWeb.Schemas.V1.ApiSpec.html" translate="no">WandaWeb.Schemas.V1.ApiSpec</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Bad Request</p></div>
+    <div class="summary-synopsis"><p>OpenApi specification for entrypoint V1</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.CatalogResponse.html" translate="no">WandaWeb.Schemas.CatalogResponse</a>
+    <a href="WandaWeb.Schemas.V1.BadRequest.html" translate="no">WandaWeb.Schemas.V1.BadRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Bad Request.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.Catalog.CatalogResponse.html" translate="no">WandaWeb.Schemas.V1.Catalog.CatalogResponse</a>
 
   </div>
 
@@ -588,7 +999,7 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.CatalogResponse.Check.html" translate="no">WandaWeb.Schemas.CatalogResponse.Check</a>
+    <a href="WandaWeb.Schemas.V1.Catalog.Check.html" translate="no">WandaWeb.Schemas.V1.Catalog.Check</a>
 
   </div>
 
@@ -597,7 +1008,61 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.ExecutionResponse.html" translate="no">WandaWeb.Schemas.ExecutionResponse</a>
+    <a href="WandaWeb.Schemas.V1.ChecksCustomizations.CustomValue.html" translate="no">WandaWeb.Schemas.V1.ChecksCustomizations.CustomValue</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Custom value to be applied or already applied to a check</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.ChecksCustomizations.CustomizationRequest.html" translate="no">WandaWeb.Schemas.V1.ChecksCustomizations.CustomizationRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Request to customize a check</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.ChecksCustomizations.CustomizationResponse.html" translate="no">WandaWeb.Schemas.V1.ChecksCustomizations.CustomizationResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Response for a customization operation</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.ChecksSelection.CustomizedCheckValue.html" translate="no">WandaWeb.Schemas.V1.ChecksSelection.CustomizedCheckValue</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A Customized Check Value</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.ChecksSelection.NotCustomizedCheckValue.html" translate="no">WandaWeb.Schemas.V1.ChecksSelection.NotCustomizedCheckValue</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A Check Value that has not been customized.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.ChecksSelection.SelectableChecksResponse.html" translate="no">WandaWeb.Schemas.V1.ChecksSelection.SelectableChecksResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Response representing the list of selectable checks for a given execution group and environment.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.Execution.ExecutionResponse.html" translate="no">WandaWeb.Schemas.V1.Execution.ExecutionResponse</a>
 
   </div>
 
@@ -606,16 +1071,7 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.Health.html" translate="no">WandaWeb.Schemas.Health</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Healthcheck</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="WandaWeb.Schemas.ListExecutionsResponse.html" translate="no">WandaWeb.Schemas.ListExecutionsResponse</a>
+    <a href="WandaWeb.Schemas.V1.Execution.ListExecutionsResponse.html" translate="no">WandaWeb.Schemas.V1.Execution.ListExecutionsResponse</a>
 
   </div>
 
@@ -624,29 +1080,146 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.NotFound.html" translate="no">WandaWeb.Schemas.NotFound</a>
+    <a href="WandaWeb.Schemas.V1.Execution.StartExecutionRequest.html" translate="no">WandaWeb.Schemas.V1.Execution.StartExecutionRequest</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>404 - Not Found</p></div>
+    <div class="summary-synopsis"><p>The request to be sent to start an execution.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.Ready.html" translate="no">WandaWeb.Schemas.Ready</a>
+    <a href="WandaWeb.Schemas.V1.Forbidden.html" translate="no">WandaWeb.Schemas.V1.Forbidden</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>Ready</p></div>
+    <div class="summary-synopsis"><p>403 - Forbidden.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.Schemas.StartExecutionRequest.html" translate="no">WandaWeb.Schemas.StartExecutionRequest</a>
+    <a href="WandaWeb.Schemas.V1.Health.html" translate="no">WandaWeb.Schemas.V1.Health</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>The request to be sent to start an execution</p></div>
+    <div class="summary-synopsis"><p>Healthcheck</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.NotFound.html" translate="no">WandaWeb.Schemas.V1.NotFound</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>404 - Not Found.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.Operation.ListOperationsResponse.html" translate="no">WandaWeb.Schemas.V1.Operation.ListOperationsResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operation list response API spec</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.Operation.OperationResponse.html" translate="no">WandaWeb.Schemas.V1.Operation.OperationResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Operation item response API spec</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.Ready.html" translate="no">WandaWeb.Schemas.V1.Ready</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Ready.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V1.UnprocessableEntity.html" translate="no">WandaWeb.Schemas.V1.UnprocessableEntity</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>422 - Unprocessable Entity.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V2.ApiSpec.html" translate="no">WandaWeb.Schemas.V2.ApiSpec</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenApi specification for entrypoint V2</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V2.Execution.ExecutionResponse.html" translate="no">WandaWeb.Schemas.V2.Execution.ExecutionResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Execution item response API spec</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V2.Execution.ListExecutionsResponse.html" translate="no">WandaWeb.Schemas.V2.Execution.ListExecutionsResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Execution list response API spec</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V2.Execution.StartExecutionRequest.html" translate="no">WandaWeb.Schemas.V2.Execution.StartExecutionRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>The request to be sent to start an execution.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V3.ApiSpec.html" translate="no">WandaWeb.Schemas.V3.ApiSpec</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenApi specification for entrypoint V3</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V3.Catalog.CatalogResponse.html" translate="no">WandaWeb.Schemas.V3.Catalog.CatalogResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Checks catalog response API spec</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.Schemas.V3.Catalog.Check.html" translate="no">WandaWeb.Schemas.V3.Catalog.Check</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Individual check of the catalog response API spec</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.UserAwareConnCase.html" translate="no">WandaWeb.UserAwareConnCase</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Test case to deal with users and their abilities.</p></div>
 
 </div>
 <div class="summary-row">
@@ -658,7 +1231,21 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.V1.CatalogView.html" translate="no">WandaWeb.V1.CatalogView</a>
+    <a href="WandaWeb.V1.CatalogJSON.html" translate="no">WandaWeb.V1.CatalogJSON</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V1.ChecksCustomizationsController.html" translate="no">WandaWeb.V1.ChecksCustomizationsController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V1.ChecksCustomizationsJSON.html" translate="no">WandaWeb.V1.ChecksCustomizationsJSON</a>
 
   </div>
 
@@ -672,61 +1259,100 @@ it carries the same identifiers provided by the consumer that requested the exec
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="WandaWeb.V1.ExecutionView.html" translate="no">WandaWeb.V1.ExecutionView</a>
+    <a href="WandaWeb.V1.ExecutionJSON.html" translate="no">WandaWeb.V1.ExecutionJSON</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V1.OperationController.html" translate="no">WandaWeb.V1.OperationController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V1.OperationJSON.html" translate="no">WandaWeb.V1.OperationJSON</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V2.CatalogController.html" translate="no">WandaWeb.V2.CatalogController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V2.CatalogJSON.html" translate="no">WandaWeb.V2.CatalogJSON</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V2.ExecutionController.html" translate="no">WandaWeb.V2.ExecutionController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V2.ExecutionJSON.html" translate="no">WandaWeb.V2.ExecutionJSON</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V3.CatalogController.html" translate="no">WandaWeb.V3.CatalogController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="WandaWeb.V3.CatalogJSON.html" translate="no">WandaWeb.V3.CatalogJSON</a>
 
   </div>
 
 </div>
 
-    </div>
-  </section>
+      </div>
+    </section>
 
 
-<div class="bottom-actions">
-  <div class="bottom-actions-item">
+</div>
+    <footer class="footer">
+      <p>
 
-  </div>
-  <div class="bottom-actions-item">
+        <span class="line">
+          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+            Search HexDocs
+          </button>
 
-      <a href="readme.html" class="bottom-actions-button" rel="next">
-        <span class="subheader">
-          Next Page →
+            <a href="Wanda.epub" title="ePub version">
+              Download ePub version
+            </a>
+
         </span>
-        <span class="title">
-Wanda
-        </span>
-      </a>
+      </p>
 
+      <p class="built-using">
+        Built using
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.38.1) for the
+
+          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+      </p>
+
+    </footer>
   </div>
+</main>
 </div>
-      <footer class="footer">
-        <p>
-
-          <span class="line">
-            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
-              Search HexDocs
-            </button>
-
-              <a href="Wanda.epub" title="ePub version">
-                Download ePub version
-              </a>
-
-          </span>
-        </p>
-
-        <p class="built-using">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
-
-            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
-
-        </p>
-      </footer>
-    </div>
-  </div>
-</section>
-</div>
-
 
   </body>
 </html>
